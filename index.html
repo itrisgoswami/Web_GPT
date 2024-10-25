@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">PORTFOLIO</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to My Website</h1>
+            <p>Hi, I'm Rishav Goswami. A passionate learner dedicated to Technology</p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn">Learn More</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+    
+                const target = document.querySelector(this.getAttribute('href'));
+    
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>    
+</body>
+</html>
+
+<section class="home" id="home">
+    <div class="container">
+        <div class="home-content">
+            <h1>Rishav Goswami</h1>
+            <h2>Computer Science Enthusiast</h2>
+            <p>Passionate about Artificial Intelligence and Machine Learning.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="container">
+        <h2>About Me</h2>
+        <p>I am <strong>Rishav Goswami</strong>, and I am currently pursuing a B.Tech degree in Computer Science and Engineering with a specialization in Artificial Intelligence and Machine Learning. I have a passion for exploring new technologies and a deep admiration for the ever-evolving tech world.</p>
+    </div>
+</section>
+
+<section class="education" id="education">
+    <div class="container">
+        <h2>Educational Background</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <h3>Higher Secondary Examination [2023 - 2024]</h3>
+                    <p>School Name: Hariyana Vidya Mandir</p>
+                    <p>Passed Class 12 with 82% </p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <h3>Secondary Examination [2021 - 2022]</h3>
+                    <p>School Name: Hariyana Vidya Mandir</p>
+                    <p>Passed Class 10 with 95.4% </p>
+                </div>
+            </div>
+            <!-- Add more timeline items as needed -->
+        </div>
+    </div>
+</section>
+
+<section class="experience" id="experience">
+    <div class="container">
+        <h2>Experience</h2>
+        <p>I am currently a fresher, looking forward to gaining professional experience and applying my skills in the field of Artificial Intelligence and Machine Learning.</p>
+    </div>
+</section>
+
+<section class="publications" id="publications">
+    <div class="container">
+        <h2>Publications</h2>
+        <p>Currently, there are no publications to display.</p>
+    </div>
+</section>
+
+<section class="awards" id="awards">
+    <div class="container">
+        <h2>Awards & Achievements</h2>
+        <p>Currently, there are no awards or achievements to display.</p>
+    </div>
+</section>
+
+<section class="projects" id="projects">
+    <div class="container">
+        <h2>Projects</h2>
+        <div class="project-item">
+            <h3>Electronic Shop Management</h3>
+            <p>Developed using Python and MySQL, this project manages the inventory, sales, and customer information of an electronic shop.</p>
+        </div>
+    </div>
+</section>
+
+<section class="presentations" id="presentations">
+    <div class="container">
+        <h2>Poster/Paper Presentations</h2>
+        <p class="no-presentations">Currently, there are no poster or paper presentations to display.</p>
+    </div>
+</section>
+
+<section class="courses" id="courses">
+    <div class="container">
+        <h2>Courses Completed</h2>
+        <div class="course-platform">
+            <h3>LinkedIn Learning</h3>
+            <ul>
+                <li>Learning Arduino: Foundations</li>
+                <li>ChatGPT: Publishing your GPTs on the GPT Store</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="container">
+        <h2>Contact Address</h2>
+        <p><strong>Phone:</strong> <a href="tel:+919123061459">9123061459</a></p>
+        <p><strong>Email:</strong> <a href="mailto:goswamirishab.net@gmail.com">goswamirishab.net@gmail.com</a></p>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; 2024 Rishav Goswami. All Rights Reserved.</p>
+            <p>Phone: <a href="tel:+919123061459">9123061459</a> | Email: <a href="mailto:goswamirishab.net@gmail.com">goswamirishab.net@gmail.com</a></p>
+            <ul class="social-links">
+                <li><a href="www.linkedin.com/in/rishavgoswami26">LinkedIn</a></li>
+                <li><a href="https://github.com/itrisgoswami">GitHub</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+

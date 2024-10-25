@@ -1,0 +1,1040 @@
+/* Reset some default browser styles */
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Apply a dark theme background and font settings */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(image.png);
+    background-repeat: no-repeat;
+    
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1c1c1c;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo styling */
+.logo a {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Navbar links */
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    font-size: 16px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00adb5;
+}
+
+/* Hamburger menu for smaller screens */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 4px 0;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #1c1c1c;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* Show/hide menu on small screens */
+.menu-toggle.active + .nav-links {
+    display: flex;
+}
+/* Reset and default styles are assumed to be the same from the previous code */
+
+/* Hero section styles */
+.hero {
+    height: 100vh;
+    background-image: url('hero-background.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Dark overlay to improve text visibility */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Hero content styles */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Button styles */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 25px;
+    background-color: #00adb5;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #028a96;
+}
+
+.btn-secondary {
+    background-color: #393e46;
+}
+
+.btn-secondary:hover {
+    background-color: #4b525c;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
+  
+/* Reset and default styles assumed to be the same from previous code */
+
+/* Educational Background Section Styles */
+.education {
+    padding: 60px 20px;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    text-align: center;
+}
+
+.education h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00adb5;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 40px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50px;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #00adb5;
+}
+
+/* Timeline Item Styles */
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #00adb5;
+    border-radius: 50%;
+    position: absolute;
+    left: 40px;
+    top: 0;
+}
+
+.timeline-content {
+    background-color: #2a2a2a;
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-left: 60px;
+    width: calc(100% - 80px);
+    text-align: left;
+}
+
+.timeline-content h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #00adb5;
+}
+
+.timeline-content p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #cfcfcf;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-icon {
+        left: 10px;
+    }
+
+    .timeline-content {
+        margin-left: 40px;
+        width: calc(100% - 60px);
+    }
+}
+/* Reset and default styles assumed to be the same from previous code */
+
+/* Experience Section Styles */
+.experience {
+    padding: 60px 20px;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    text-align: center;
+}
+
+.experience h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00adb5;
+}
+
+.experience p {
+    font-size: 18px;
+    color: #d3d3d3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience h2 {
+        font-size: 28px;
+    }
+
+    .experience p {
+        font-size: 16px;
+    }
+}
+
+
+/* Reset and default styles assumed to be the same from previous code */
+
+/* Publications Section Styles */
+.publications {
+    padding: 60px 20px;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    text-align: center;
+}
+
+.publications h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00adb5;
+}
+
+.publications p {
+    font-size: 18px;
+    color: #d3d3d3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .publications h2 {
+        font-size: 28px;
+    }
+
+    .publications p {
+        font-size: 16px;
+    }
+}
+
+/* Reset and default styles assumed to be the same from previous code */
+
+/* Awards & Achievements Section Styles */
+.awards {
+    padding: 60px 20px;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    text-align: center;
+}
+
+.awards h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00adb5;
+}
+
+.awards p {
+    font-size: 18px;
+    color: #d3d3d3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .awards h2 {
+        font-size: 28px;
+    }
+
+    .awards p {
+        font-size: 16px;
+    }
+}
+
+/* Reset and default styles assumed to be the same from previous code */
+
+/* Projects Section Styles */
+.projects {
+    padding: 60px 20px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00adb5;
+}
+
+.project-item {
+    background-color: #262626;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item h3 {
+    font-size: 24px;
+    color: #00adb5;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    font-size: 16px;
+    color: #d3d3d3;
+}
+
+/* Smooth Hover Effect for Project Item */
+.project-item:hover {
+    transform: translateY(-10px); /* Moves up smoothly */
+    background-color: #333333;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects h2 {
+        font-size: 28px;
+    }
+
+    .project-item h3 {
+        font-size: 22px;
+    }
+
+    .project-item p {
+        font-size: 15px;
+    }
+}
+
+/* Reset and default styles assumed to be the same from previous code */
+
+/* Projects Section Styles */
+.projects {
+    padding: 60px 20px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00adb5;
+}
+
+.project-item {
+    background-color: #262626;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Changes cursor on hover */
+}
+
+.project-item h3 {
+    font-size: 24px;
+    color: #00adb5;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    font-size: 16px;
+    color: #d3d3d3;
+}
+
+/* Hover Effect with Animation for Project Item */
+.project-item:hover {
+    transform: translateY(-10px) scale(1.02); /* Moves up and slightly enlarges */
+    background-color: #333333;
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.5); /* Darker and larger shadow */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects h2 {
+        font-size: 28px;
+    }
+
+    .project-item h3 {
+        font-size: 22px;
+    }
+
+    .project-item p {
+        font-size: 15px;
+    }
+}
+
+
+/* Reset and default styles assumed to be the same from previous code */
+
+/* Membership Section Styles */
+.membership {
+    padding: 60px 20px;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    text-align: center;
+}
+
+.membership h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00adb5;
+}
+
+/* No Membership Message */
+.no-membership {
+    font-size: 18px;
+    color: #d3d3d3;
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .no-membership {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+/* Research Thrust Area Section Styles */
+.research {
+    padding: 60px 20px;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    text-align: center;
+}
+
+.research h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00adb5;
+}
+
+/* Research Item Styles */
+.research-item {
+    max-width: 800px;
+    background-color: #2a2a2a;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    text-align: left;
+}
+
+.research-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+}
+
+.research-item h3 {
+    font-size: 22px;
+    color: #00adb5;
+    margin-bottom: 10px;
+}
+
+.research-item p {
+    font-size: 16px;
+    color: #d3d3d3;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .research-item {
+        padding: 20px;
+    }
+
+    .research-item h3 {
+        font-size: 20px;
+    }
+
+    .research-item p {
+        font-size: 14px;
+    }
+}
+
+/* Reset and default styles assumed to be the same from previous code */
+
+/* Events Section Styles */
+.events {
+    padding: 60px 20px;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    text-align: center;
+}
+
+.events h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00adb5;
+}
+
+/* Event List Styles */
+.event-list {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.event-item {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.event-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+}
+
+.event-item h3 {
+    font-size: 22px;
+    color: #00adb5;
+    margin-bottom: 10px;
+}
+
+.event-item p {
+    font-size: 16px;
+    color: #d3d3d3;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.event-item strong {
+    color: #00adb5;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .event-item {
+        padding: 15px;
+    }
+
+    .event-item h3 {
+        font-size: 20px;
+    }
+
+    .event-item p {
+        font-size: 14px;
+    }
+}
+
+/* Reset and default styles assumed to be the same from previous code */
+
+/* Presentations Section Styles */
+.presentations {
+    padding: 60px 20px;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    text-align: center;
+}
+
+.presentations h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00adb5;
+}
+
+/* No Presentations Message */
+.no-presentations {
+    font-size: 18px;
+    color: #d3d3d3;
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .no-presentations {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+/* Reset and default styles assumed to be the same from previous code */
+
+/* Courses Section Styles */
+.courses {
+    padding: 60px 20px;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    text-align: center;
+}
+
+.courses h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00adb5;
+}
+
+/* Course Platform Styles */
+.course-platform {
+    max-width: 800px;
+    background-color: #2a2a2a;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    text-align: left;
+}
+
+.course-platform:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+}
+
+.course-platform h3 {
+    font-size: 22px;
+    color: #00adb5;
+    margin-bottom: 15px;
+}
+
+.course-platform ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.course-platform li {
+    font-size: 16px;
+    color: #d3d3d3;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.course-platform li::before {
+    content: '•';
+    color: #00adb5;
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .course-platform {
+        padding: 20px;
+    }
+
+    .course-platform h3 {
+        font-size: 20px;
+    }
+
+    .course-platform li {
+        font-size: 14px;
+    }
+}
+
+
+/* Reset and default styles assumed to be the same from previous code */
+
+/* Contact Section Styles */
+.contact {
+    padding: 60px 20px;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00adb5;
+}
+
+/* Contact Info Styles */
+.contact p {
+    font-size: 18px;
+    color: #d3d3d3;
+    margin: 10px 0;
+}
+
+.contact a {
+    color: #caff39;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact p {
+        font-size: 16px;
+    }
+}
+
+/* Reset and default styles assumed to be the same from previous code */
+
+/* Footer Section Styles */
+.footer {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.footer p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #d3d3d3;
+}
+
+.footer a {
+    color: #00adb5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ffffff;
+}
+
+.footer .social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.footer .social-links li {
+    margin: 0 10px;
+}
+
+.footer .social-links a {
+    font-size: 16px;
+    color: #d3d3d3;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer .social-links a:hover {
+    background-color: #00adb5;
+    color: #1c1c1c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer p {
+        font-size: 13px;
+    }
+
+    .footer .social-links a {
+        font-size: 14px;
+    }
+}
+
+/* Reset and default styles assumed to be the same from previous code */
+
+/* Home Section Styles */
+.home {
+    background-color: #0e0e0e;
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('background.jpg'); /* Optional: add a background image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1c1c1c; /* Dark overlay to make text more readable */
+}
+
+.home .container {
+    position: relative;
+    z-index: 2;
+}
+
+.home-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #00adb5;
+}
+
+.home-content h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #d3d3d3;
+}
+
+.home-content p {
+    font-size: 18px;
+    color: #b3b3b3;
+    margin-bottom: 30px;
+}
+
+.home-content .btn {
+    background-color: #00adb5;
+    color: #0e0e0e;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home-content .btn:hover {
+    background-color: #008b8b;
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .home-content h2 {
+        font-size: 22px;
+    }
+
+    .home-content p {
+        font-size: 16px;
+    }
+}
+
+/* Reset and default styles assumed to be the same from previous code */
+
+/* About Me Section Styles */
+.about {
+    padding: 60px 20px;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00adb5;
+}
+
+.about p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #d3d3d3;
+}
+
+.about strong {
+    color: #00adb5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about h2 {
+        font-size: 28px;
+    }
+
+    .about p {
+        font-size: 16px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
